@@ -2,18 +2,14 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
-/* import fragment from "./shader/fragment.glsl"; */
-/* import vertex from "./shader/vertex.glsl"; */
-
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
-import { HoloEffect } from "./HoloEffect.js";
+import { HoloEffect } from "./lib/HoloEffect.js";
 import GUI from "lil-gui";
-import { gsap } from "gsap";
-import model from "./human.glb";
-import env from "./env.jpeg";
+import model from "./assets/models/human.glb";
+import env from "./assets/images/env.jpeg";
 
 export default class Sketch {
     constructor(options) {
