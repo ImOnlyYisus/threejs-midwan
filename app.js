@@ -38,7 +38,7 @@ export default class Sketch {
             1000
         );
 
-        this.camera.position.set(-1, 0, 0);
+        this.camera.position.set(1, 1, 1);
         this.controls = new OrbitControls(
             this.camera,
             this.renderer.domElement
@@ -62,6 +62,16 @@ export default class Sketch {
         this.resize();
         this.render();
         this.setupResize();
+    }
+
+    scrollAnimation() {
+        windows.addEventListener("mousedown", () => {
+            gsap.to(this.settings, {
+                duration: 1,
+                progress: 1,
+                ease: "power3.inOut",
+            });
+        });
     }
 
     initPost() {
